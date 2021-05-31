@@ -34,7 +34,7 @@ Global Styles
 }
 
 body {
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
   font-size: 1rem;
 }
 
