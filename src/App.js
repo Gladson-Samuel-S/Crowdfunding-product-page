@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Header from './Components/Header'
 
 const App = () => {
