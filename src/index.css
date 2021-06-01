@@ -18,6 +18,7 @@ Variables
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: #fff;
   --clr-darkgrey: hsl(0, 0%, 48%);
+  --clr-bg: #f5f4f4;
   /* font */
   --ff-primary: "sans-serif";
   --ff-secondary: "Commissioner";
@@ -36,6 +37,10 @@ Global Styles
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  background-color: var(--clr-bg);
 }
 
 body {

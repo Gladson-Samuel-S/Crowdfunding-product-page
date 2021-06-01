@@ -29,6 +29,7 @@ const Head = styled.header`
     display: none;
   }
   .nav-items {
+    z-index: 999;
     position: absolute;
     height: 25vh;
     width: 90vw;
@@ -71,6 +72,9 @@ const Head = styled.header`
     ul a {
       padding: 1rem;
       color: var(--clr-white);
+    }
+    ul a:hover {
+      color: #f8f3f3;
     }
   }
 
