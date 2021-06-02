@@ -4,15 +4,37 @@ import bookmarkImg from "../images/icon-bookmark.svg"
 import bookmarkClosed from "../images/icon-bookmark-checked.svg"
 import { useState } from "react"
 
-const Wrapper = styled.main`
-  width: min(90%, 45rem);
-  margin: 0 auto;
-`
+const Card1 = () => {
+  const [bookmark, setBookmark] = useState(false)
+  const handleClick = () => {
+    setBookmark(!bookmark)
+  }
+
+  return (
+    <Card>
+      <div className='logo'>
+        <img src={logo} alt='logo' height='56px' width='56px' />
+      </div>
+      <h2> Mastercraft Bamboo Monitor Riser</h2>
+      <p>
+        A beautiful & handcrafted monitor stand to reduce neck and eye strain.
+      </p>
+      <div className='action-area'>
+        <Button>Back this project</Button>
+        <button className='bkmark-btn' onClick={handleClick}>
+          <img src={bookmark ? bookmarkClosed : bookmarkImg} alt='Bookmark' />
+          {bookmark ? (
+            <p className='bktext'>Bookmarked</p>
+          ) : (
+            <p className='bktext'>Bookmark</p>
+          )}
+        </button>
+      </div>
+    </Card>
+  )
+}
 
 const Card = styled.article`
-  /* height: 40vh; */
-  position: relative;
-  bottom: 10vh;
   padding: 2.5rem 2rem;
   background-color: #fff;
   border-radius: var(--radius);
@@ -81,38 +103,9 @@ const Button = styled.button`
   :hover {
     background-color: var(--clr-primary-darkcyan);
   }
+  :active {
+    transform: scale(0.98);
+  }
 `
 
-const Body = () => {
-  const [bookmark, setBookmark] = useState(false)
-  const handleClick = () => {
-    setBookmark(!bookmark)
-  }
-
-  return (
-    <Wrapper>
-      <Card>
-        <div className='logo'>
-          <img src={logo} alt='logo' height='56px' width='56px' />
-        </div>
-        <h2> Mastercraft Bamboo Monitor Riser</h2>
-        <p>
-          A beautiful & handcrafted monitor stand to reduce neck and eye strain.
-        </p>
-        <div className='action-area'>
-          <Button>Back this project</Button>
-          <button className='bkmark-btn' onClick={handleClick}>
-            <img src={bookmark ? bookmarkClosed : bookmarkImg} alt='Bookmark' />
-            {bookmark ? (
-              <p className='bktext'>Bookmarked</p>
-            ) : (
-              <p className='bktext'>Bookmark</p>
-            )}
-          </button>
-        </div>
-      </Card>
-    </Wrapper>
-  )
-}
-
-export default Body
+export default Card1
