@@ -63,8 +63,8 @@ const Card = styled.article`
   }
   .bkmark-btn {
     border: none;
-    outline: none;
     border-radius: 30px;
+    outline: none;
     padding: 0 !important;
   }
   .bktext {
