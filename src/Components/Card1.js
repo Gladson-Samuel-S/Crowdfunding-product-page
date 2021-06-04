@@ -3,15 +3,24 @@ import logo from "../images/logo-mastercraft.svg"
 import bookmarkImg from "../images/icon-bookmark.svg"
 import bookmarkClosed from "../images/icon-bookmark-checked.svg"
 import { useState } from "react"
+import Modal from "../Components/Modal"
 
 const Card1 = () => {
   const [bookmark, setBookmark] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   const handleClick = () => {
     setBookmark(!bookmark)
   }
 
+  const handleModal = () => {
+    setIsModalOpen(!isModalOpen)
+  }
+
   return (
     <Card>
+      {isModalOpen ? <Modal /> : null}
+
       <div className='logo'>
         <img src={logo} alt='logo' height='56px' width='56px' />
       </div>
@@ -20,7 +29,7 @@ const Card1 = () => {
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
       <div className='action-area'>
-        <Button>Back this project</Button>
+        <Button onClick={handleModal}>Back this project</Button>
         <button className='bkmark-btn' onClick={handleClick}>
           <img src={bookmark ? bookmarkClosed : bookmarkImg} alt='Bookmark' />
           {bookmark ? (
