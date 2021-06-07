@@ -13,6 +13,7 @@ const Card1 = () => {
     setBookmark(!bookmark)
   }
 
+  // handle modal
   const handleModal = () => {
     setIsModalOpen(!isModalOpen)
   }
