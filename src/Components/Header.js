@@ -29,7 +29,7 @@ const Head = styled.header`
     display: none;
   }
   .nav-items {
-    z-index: 999;
+    z-index: 1;
     position: absolute;
     height: 25vh;
     width: 90vw;

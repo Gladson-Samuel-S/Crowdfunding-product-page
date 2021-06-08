@@ -21,12 +21,9 @@ const Card1 = () => {
   return (
     <Card>
       {isModalOpen ? <Modal /> : null}
-
-      <div className='logo'>
-        <img src={logo} alt='logo' height='56px' width='56px' />
-      </div>
-      <h2> Mastercraft Bamboo Monitor Riser</h2>
-      <p>
+      <img id='logo' src={logo} alt='logo' height='56px' width='56px' />
+      <h2 className='title'> Mastercraft Bamboo Monitor Riser</h2>
+      <p className='description'>
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
       <div className='action-area'>
@@ -45,21 +42,20 @@ const Card1 = () => {
 }
 
 const Card = styled.article`
+  position: relative;
+  margin-top: -5rem;
+  z-index: 1 !important;
   padding: 2.5rem 2rem;
   background-color: #fff;
   border-radius: var(--radius);
   text-align: center;
-  h2 {
-    position: relative;
-    bottom: 2rem;
+  #logo {
+    z-index: -1 !important;
+    position: absolute;
+    top: -0.4rem;
+    transform: translate(-50%, -50%);
   }
-  .logo {
-    position: relative;
-    bottom: 4rem;
-  }
-  p {
-    position: relative;
-    bottom: 1rem;
+  .description {
     color: var(--clr-darkgrey);
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -72,6 +68,8 @@ const Card = styled.article`
     cursor: pointer;
   }
   .bkmark-btn {
+    display: flex;
+    align-items: center;
     border: none;
     border-radius: 30px;
     outline: none;
@@ -83,11 +81,9 @@ const Card = styled.article`
 
   @media only screen and (min-width: 600px) {
     .bktext {
+      display: block;
       color: var(--clr-primary-cyan);
       font-weight: bold;
-      display: inline;
-      position: relative;
-      bottom: 20px;
       margin-left: 20px;
     }
     .bkmark-btn {

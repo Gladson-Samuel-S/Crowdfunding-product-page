@@ -14,8 +14,8 @@ const Cards = () => {
 }
 
 const Wrapper = styled.main`
-  position: relative;
-  bottom: 10vh;
+  /* position: relative;
+  bottom: 10vh; */
   width: min(90%, 45rem);
   margin: 0 auto;
   display: flex;
