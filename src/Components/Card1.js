@@ -3,7 +3,7 @@ import logo from "../images/logo-mastercraft.svg"
 import bookmarkImg from "../images/icon-bookmark.svg"
 import bookmarkClosed from "../images/icon-bookmark-checked.svg"
 import { useState } from "react"
-import Modal from "../Components/Modal"
+import ThankYouModal from "./ThankYouModal"
 
 const Card1 = () => {
   const [bookmark, setBookmark] = useState(false)
@@ -20,7 +20,12 @@ const Card1 = () => {
 
   return (
     <Card>
-      {isModalOpen ? <Modal /> : null}
+      {isModalOpen && (
+        <ThankYouModal
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
+      )}
       <img id='logo' src={logo} alt='logo' height='56px' width='56px' />
       <h2 className='title'> Mastercraft Bamboo Monitor Riser</h2>
       <p className='description'>
@@ -44,7 +49,7 @@ const Card1 = () => {
 const Card = styled.article`
   position: relative;
   margin-top: -5rem;
-  z-index: 1 !important;
+  /* z-index: 1 !important; */
   padding: 2.5rem 2rem;
   background-color: #fff;
   border-radius: var(--radius);
@@ -58,7 +63,8 @@ const Card = styled.article`
   .description {
     color: var(--clr-darkgrey);
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .action-area {
     display: flex;

@@ -1,9 +1,14 @@
+import { useState } from "react"
 import styled from "styled-components"
 import data from "./data/Data"
+import Modal from "./Modal"
 
 const Card3 = () => {
+  const [isModal, setModal] = useState(false)
+
   return (
     <Card>
+      {isModal && <Modal isModal={isModal} setModal={setModal} />}
       <h1> About this project</h1>
       <p>
         The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
@@ -32,7 +37,14 @@ const Card3 = () => {
                 <span>{item.left}</span>
               </div>
               {item.amount ? (
-                <Button>{item.button}</Button>
+                <Button
+                  onClick={() => {
+                    console.log("Yes it's working")
+                    setModal(!isModal)
+                  }}
+                >
+                  {item.button}
+                </Button>
               ) : (
                 <Button disabled style={{ pointerEvents: "none" }}>
                   {item.button}
