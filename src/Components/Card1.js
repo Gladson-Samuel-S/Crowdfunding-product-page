@@ -80,6 +80,7 @@ const Card = styled.article`
     border-radius: 30px;
     outline: none;
     padding: 0 !important;
+    width: 11rem;
   }
   .bktext {
     display: none;
