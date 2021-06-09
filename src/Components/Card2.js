@@ -21,7 +21,6 @@ const Card2 = () => {
 
       <div className='progress-area'>
         <div className='progress'></div>
-        <div className='remaining'></div>
       </div>
     </Card>
   )
@@ -39,19 +38,15 @@ const Card = styled.article`
     margin-bottom: 2rem;
   }
   .progress-area {
-    display: flex;
+    background-color: var(--clr-bg);
+    border-radius: var(--radius);
   }
   .progress {
     width: 70%;
+    max-width: 100%;
     height: 0.7rem;
     background-color: var(--clr-primary-cyan);
-    border-radius: 10px;
-  }
-  .remaining {
-    width: 30%;
-    height: 0.7rem;
-    background-color: var(--clr-bg);
-    border-radius: 10px;
+    border-radius: var(--radius);
   }
   p {
     margin-top: 0.5rem;
