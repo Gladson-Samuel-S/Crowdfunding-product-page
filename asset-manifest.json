@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Crowdfunding-product-page/static/css/main.59c8b854.chunk.css",
+    "main.js": "/Crowdfunding-product-page/static/js/main.920a7c8d.chunk.js",
+    "main.js.map": "/Crowdfunding-product-page/static/js/main.920a7c8d.chunk.js.map",
+    "runtime-main.js": "/Crowdfunding-product-page/static/js/runtime-main.1cecee34.js",
+    "runtime-main.js.map": "/Crowdfunding-product-page/static/js/runtime-main.1cecee34.js.map",
+    "static/js/2.61a76b19.chunk.js": "/Crowdfunding-product-page/static/js/2.61a76b19.chunk.js",
+    "static/js/2.61a76b19.chunk.js.map": "/Crowdfunding-product-page/static/js/2.61a76b19.chunk.js.map",
+    "index.html": "/Crowdfunding-product-page/index.html",
+    "static/css/main.59c8b854.chunk.css.map": "/Crowdfunding-product-page/static/css/main.59c8b854.chunk.css.map",
+    "static/js/2.61a76b19.chunk.js.LICENSE.txt": "/Crowdfunding-product-page/static/js/2.61a76b19.chunk.js.LICENSE.txt",
+    "static/media/icon-bookmark-checked.30afd333.svg": "/Crowdfunding-product-page/static/media/icon-bookmark-checked.30afd333.svg",
+    "static/media/icon-bookmark.7777f8ec.svg": "/Crowdfunding-product-page/static/media/icon-bookmark.7777f8ec.svg",
+    "static/media/icon-check.bdee5269.svg": "/Crowdfunding-product-page/static/media/icon-check.bdee5269.svg",
+    "static/media/icon-close-menu.32169d31.svg": "/Crowdfunding-product-page/static/media/icon-close-menu.32169d31.svg",
+    "static/media/icon-close-modal.732388df.svg": "/Crowdfunding-product-page/static/media/icon-close-modal.732388df.svg",
+    "static/media/icon-hamburger.f8a9f0cf.svg": "/Crowdfunding-product-page/static/media/icon-hamburger.f8a9f0cf.svg",
+    "static/media/image-hero-desktop.631209c1.jpg": "/Crowdfunding-product-page/static/media/image-hero-desktop.631209c1.jpg",
+    "static/media/image-hero-mobile.d4f477d4.jpg": "/Crowdfunding-product-page/static/media/image-hero-mobile.d4f477d4.jpg",
+    "static/media/logo-mastercraft.dca2a831.svg": "/Crowdfunding-product-page/static/media/logo-mastercraft.dca2a831.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1cecee34.js",
+    "static/js/2.61a76b19.chunk.js",
+    "static/css/main.59c8b854.chunk.css",
+    "static/js/main.920a7c8d.chunk.js"
+  ]
+}
