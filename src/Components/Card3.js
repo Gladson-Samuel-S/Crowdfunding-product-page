@@ -2,13 +2,27 @@ import { useState } from "react"
 import styled from "styled-components"
 import data from "./data/Data"
 import Modal from "./Modal"
+import ThankYouModal from "./ThankYouModal"
 
 const Card3 = () => {
   const [isModal, setModal] = useState(false)
+  const [isThankModal, setIsThankModal] = useState(false)
+
+  const onShow = () => {
+    setIsThankModal(!isThankModal)
+  }
 
   return (
     <Card>
-      {isModal && <Modal isModal={isModal} setModal={setModal} />}
+      {isThankModal && (
+        <ThankYouModal
+          isThankModal={isThankModal}
+          setIsThankModal={setIsThankModal}
+        />
+      )}
+      {isModal && (
+        <Modal isModal={isModal} setModal={setModal} onShow={onShow} />
+      )}
       <h1> About this project</h1>
       <p>
         The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
@@ -39,7 +53,6 @@ const Card3 = () => {
               {item.amount ? (
                 <Button
                   onClick={() => {
-                    console.log("Yes it's working")
                     setModal(!isModal)
                   }}
                 >
@@ -75,6 +88,7 @@ const Subcard = styled.article`
   border: 1px dotted var(--clr-primary-cyan);
   border-radius: 10px;
   margin: 2rem 0rem;
+
   .title {
     display: flex;
     flex-direction: column;

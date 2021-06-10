@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import check from "../images/icon-check.svg"
 
-const ThankYouModal = ({ isThankModal, setIsThankModal }) => {
+const ThankYouModal = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <ModalConatiner>
       <ModalContent>
@@ -16,8 +16,7 @@ const ThankYouModal = ({ isThankModal, setIsThankModal }) => {
         </div>
         <Button
           onClick={() => {
-            // setIsModalOpen(!isModalOpen)
-            setIsThankModal(!isThankModal)
+            setIsModalOpen(!isModalOpen)
           }}
         >
           Got it!

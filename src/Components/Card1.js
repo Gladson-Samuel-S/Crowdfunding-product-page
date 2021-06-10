@@ -3,7 +3,7 @@ import logo from "../images/logo-mastercraft.svg"
 import bookmarkImg from "../images/icon-bookmark.svg"
 import bookmarkClosed from "../images/icon-bookmark-checked.svg"
 import { useState } from "react"
-import ThankYouModal from "./ThankYouModal"
+import ThankYouModal2 from "./ThankYouModal2"
 
 const Card1 = () => {
   const [bookmark, setBookmark] = useState(false)
@@ -21,7 +21,7 @@ const Card1 = () => {
   return (
     <Card>
       {isModalOpen && (
-        <ThankYouModal
+        <ThankYouModal2
           isModalOpen={isModalOpen}
           setIsModalOpen={setIsModalOpen}
         />
@@ -55,7 +55,7 @@ const Card = styled.article`
   border-radius: var(--radius);
   text-align: center;
   #logo {
-    z-index: -1 !important;
+    /* z-index: -1 !important; */
     position: absolute;
     top: -0.4rem;
     transform: translate(-50%, -50%);
@@ -80,7 +80,6 @@ const Card = styled.article`
     border-radius: 30px;
     outline: none;
     padding: 0 !important;
-    width: 11rem;
   }
   .bktext {
     display: none;
